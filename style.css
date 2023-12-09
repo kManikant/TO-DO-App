@@ -1,0 +1,190 @@
+body {
+    background-color: #071604;
+}
+
+.typing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#typing-input {
+    outline: none;
+    border:#c560d0;
+    height: 40px;
+    width: 450px;
+    text-indent: 10px;
+    background-color: #ffffff43;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#add-todo-btn {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #60d0ab;
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#todos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.todo-list {
+    color: #fff;
+    text-align: center;
+    width: 280px;
+    height: 320px;
+    background-color: #681a5e;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 2rem;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.todo-list:hover {
+    box-shadow: 0 0 10px #c560d0;
+    border: 1px solid #d06068;
+}
+
+.todo-status {
+    color: #fff;
+    font-size: 18px;
+}
+
+.removeBtn,
+.mark-btn,
+.edit-task-btn {
+    width: 240px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 1rem 1rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.removeBtn,
+.edit-task-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.mark-btn {
+    background-color: #008000;
+    color: #fff;
+}
+
+.update-edit-container {
+    display: flex;
+    align-items: last baseline;
+}
+
+.edit-todo-container {
+    background-color: #c4a3cc;
+    width: 480px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+}
+
+.edit-box {
+    grid-column: span 3;
+    outline: none;
+    border: none;
+    width: 320px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.update-btn,
+.close-btn {
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 1rem 1rem;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #360370;
+    color: #fff;
+}
+
+@media (max-width:600px) {
+    #typing-input {
+        width: 400px;
+        font-size: 15px;
+    }
+
+    #add-todo-btn {
+        padding: 10px 5px;
+        border-radius: 10px;
+        margin-left: 0.5rem;
+        font-size: 15px;
+    }
+
+    .edit-todo-container {
+        width: 280px;
+        height: 150px;
+        top: 70%;
+        left: 15%;
+    }
+
+    .edit-box {
+        width: 240px;
+    }
+
+    .update-btn,
+    .close-btn {
+        width: 100px;
+    }
+}
+
+.todo-heading {
+    margin: 1rem;
+    font-size: 3rem;
+    color: rgba(5, 204, 244, 0.825);
+    background-image: url("./heading.avif");
+    background-repeat: repeat;
+    /* -webkit-background-clip: text; */
+    animation: animate 15s ease-in-out infinite;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        background-position: left top;
+    }
+
+    25% {
+        background-position: right bottom;
+    }
+
+    50% {
+        background-position: left bottom;
+    }
+
+    75% {
+        background-position: right top;
+    }
+}
